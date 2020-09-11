@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Colosal Games</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/register.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"
+        integrity="sha512-8vfyGnaOX2EeMypNMptU+MwwK206Jk1I/tMQV4NkhOz+W8glENoMhGyU6n/6VgQUhQcJH8NqQgHhMtZjJJBv3A=="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="btn btn-outline-light my-2 my-sm-0 m-1" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tiendas Recomendadas
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://www.riotgames.com/es" target="_blank">Riot Games</a>
+                        <a class="dropdown-item" href="https://www.epicgames.com/store/es-ES/" target="_blank">Epic
+                            Games</a>
+                        <a class="dropdown-item" href="https://store.playstation.com/es-co/home/games"
+                            target="_blank">Play
+                            Station Store</a>
+                        <a class="dropdown-item" href="https://www.xbox.com/es-CO/microsoft-store" target="_blank">Xbox
+                            Store</a>
+                        <a class="dropdown-item"
+                            href="https://www.nintendo.es/My-Nintendo-Store/My-Nintendo-Store-1114919.html"
+                            target="_blank">Nintendo Store</a>
+                    </div>
+                </li>
+            </ul>
+            <a href="./login.html" class="btn btn-outline-light my-2 my-sm-0 m-1">Iniciar Sesión</a>
+            <a href="./register.html" class="btn btn-outline-light my-2 my-sm-0 m-1">Registrate</a>
+        </div>
+    </nav> 
+    <div class="login-dark">
+        <form [formGroup]="registerForm" (ngSubmit)="formRegister()">
+            <div class="illustration">
+                <i class="icon ion-ios-locked-outline">
+                    <h1>Resgístrate</h1>
+                </i>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <input formControlName="nameUser" class="form-control" type="text" name="nameUser"
+                            placeholder="Nombre de Usuario">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <input formControlName="name" class="form-control" type="name" name="name"
+                            placeholder="Nombres">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <input formControlName="surname" class="form-control" type="surname" name="surname"
+                            placeholder="Apellidos">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <input formControlName="email" class="form-control" type="email" name="email"
+                            placeholder="Email">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <input formControlName="password" class="form-control" type="password" name="password"
+                            placeholder="Contraseña">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" type="submit">
+                    Registrarse
+                </button>
+            </div>
+            <a [routerLink]="['/login']" routerLinkActive="router-link-active" class="forgot">
+                ¿ Ya tienes una cuenta ? Inicia Sesión !
+            </a>
+        </form>
+    </div>
+
+</body>
+
+</html>
